@@ -8,14 +8,16 @@ def repeats(string):
   else:
     x = int(len(s) / 2)
     
-    # go to the character in the pos after the split
+    # go to the second half of string (pos 0 is first half, pos 1 is second)
     split = string[:x+1]
     
     reps = ""
     
     # check the repetition:  
     for s in split:
+      
       reps+=1
+      # if first half = second half, return True
       if string.replace(reps, "") == "":
         return True
       else:
